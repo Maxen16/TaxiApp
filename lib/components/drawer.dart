@@ -10,15 +10,20 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: Colors.grey[900],
-      child: Column(children: [
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
         //header
-        const DrawerHeader(
+        Column(
+          children:[
+          const DrawerHeader(
           child: Icon(
             Icons.person,
             color: Colors.white,
             size: 64,
           ),
         ),
+        
 
         //home list tile
 
@@ -27,8 +32,12 @@ class MyDrawer extends StatelessWidget {
         //profile list tile
         MyListTile(icon: Icons.person, text: 'P R O F I L E', onTap: onProfileTap,),
 
+      ],),
         //logout list tile
-        MyListTile(icon: Icons.logout, text: 'L O G O U T', onTap: onSignOutTap,),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 20.0),
+          child: MyListTile(icon: Icons.logout, text: 'L O G O U T', onTap: onSignOutTap,),
+        ),
       ]),
     );
   }
