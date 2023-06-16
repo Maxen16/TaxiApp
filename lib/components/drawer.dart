@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:taxi_app/components/my_list_tile.dart';
 
 class MyDrawer extends StatelessWidget {
-  final void Function()? onProfileTap;
+  final void Function()? onAboutTap;
   final void Function()? onSignOutTap;
-  const MyDrawer({super.key, required this.onProfileTap, required this.onSignOutTap});
+  const MyDrawer({super.key, required this.onAboutTap, required this.onSignOutTap});
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +29,8 @@ class MyDrawer extends StatelessWidget {
 
         MyListTile(icon: Icons.home, text: 'H O M E', onTap: () => Navigator.pop(context),),
 
-        //profile list tile
-        MyListTile(icon: Icons.person, text: 'P R O F I L E', onTap: onProfileTap,),
+        //About list tile
+        MyListTile(icon: Icons.info, text: 'A B O U T', onTap: onAboutTap,),
 
       ],),
         //logout list tile

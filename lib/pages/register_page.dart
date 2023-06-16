@@ -99,6 +99,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     controller: emailTextController,
                     hintText: 'Email',
                     obscureText: false,
+                    horizontalpadding: 25.0,
                   ),
           
                   const SizedBox(height: 10),
@@ -108,6 +109,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     controller: passwordController,
                     hintText: 'Password',
                     obscureText: true,
+                    horizontalpadding: 25.0,
                   ),
                   const SizedBox(height: 10),
           
@@ -115,6 +117,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     controller: confirmPasswordController,
                     hintText: 'Confirm Password',
                     obscureText: true,
+                    horizontalpadding: 25.0,
                   ),
           
                   const SizedBox(height: 10),
