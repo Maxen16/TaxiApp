@@ -4,10 +4,10 @@ class CabDrivers extends StatefulWidget {
   const CabDrivers({super.key});
 
   @override
-  State<CabDrivers> createState() => CCabDriversState();
+  State<CabDrivers> createState() => CabDriversState();
 }
 
-class CCabDriversState extends State<CabDrivers> {
+class CabDriversState extends State<CabDrivers> {
   @override
   Widget build(BuildContext context) {
     return const Center(child: Text('Cab Drivers'),);

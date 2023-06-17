@@ -59,23 +59,26 @@ final List<Widget> _pages =[
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[300],
-      appBar: AppBar(
-        title: const Text('TaxiApp'),
-        centerTitle: true,
-        //action button removed cause it is in drawer also
-         
-        // actions: [
-          //sign out button
-          // IconButton(onPressed: signUserOut, icon: const Icon(Icons.logout)),
-        // ],
-        backgroundColor: Colors.grey[900],
-      ),
-      body: _pages[_selectedIndex],
-      drawer: MyDrawer(onAboutTap: goToAbout,onSignOutTap: signUserOut,),
-      bottomNavigationBar: MyBottomNavBar(
-        onTabChange: (index) => navigateBottomBar(index),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.grey[300],
+        appBar: AppBar(
+          title: const Text('TaxiApp'),
+          centerTitle: true,
+          //action button removed cause it is in drawer also
+           
+          // actions: [
+            //sign out button
+            // IconButton(onPressed: signUserOut, icon: const Icon(Icons.logout)),
+          // ],
+          backgroundColor: Colors.grey[900],
+        ),
+        body: _pages[_selectedIndex],
+        drawer: MyDrawer(onAboutTap: goToAbout,onSignOutTap: signUserOut,),
+        bottomNavigationBar: MyBottomNavBar(
+          onTabChange: (index) => navigateBottomBar(index),
+        ),
+        resizeToAvoidBottomInset: false,
       ),
     );
   }
